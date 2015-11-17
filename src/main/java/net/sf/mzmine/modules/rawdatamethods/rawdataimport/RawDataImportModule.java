@@ -40,12 +40,12 @@ import net.sf.mzmine.datamodel.RawDataFileWriter;
 import net.sf.mzmine.main.MZmineCore;
 import net.sf.mzmine.modules.MZmineModuleCategory;
 import net.sf.mzmine.modules.MZmineProcessingModule;
-import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.AgilentCsvReadTask;
-import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.MzDataReadTask;
-import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.MzMLReadTask;
+//import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.AgilentCsvReadTask;
+//import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.MzDataReadTask;
+//import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.MzMLReadTask;
 import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.MzXMLReadTask;
-import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.NativeFileReadTask;
-import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.NetCDFReadTask;
+//import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.NativeFileReadTask;
+//import net.sf.mzmine.modules.rawdatamethods.rawdataimport.fileformats.NetCDFReadTask;
 import net.sf.mzmine.parameters.ParameterSet;
 import net.sf.mzmine.taskcontrol.Task;
 import net.sf.mzmine.util.ExitCode;
@@ -177,29 +177,29 @@ public class RawDataImportModule implements MZmineProcessingModule {
             }
 
             switch (fileType) {
-            case MZDATA:
-                newTask = new MzDataReadTask(project, fileNames[i],
-                        newMZmineFile);
-                break;
-            case MZML:
-                newTask = new MzMLReadTask(project, fileNames[i], newMZmineFile);
-                break;
+            //case MZDATA:
+            //    newTask = new MzDataReadTask(project, fileNames[i],
+            //            newMZmineFile);
+            //    break;
+            //case MZML:
+            //    newTask = new MzMLReadTask(project, fileNames[i], newMZmineFile);
+            //    break;
             case MZXML:
                 newTask = new MzXMLReadTask(project, fileNames[i],
                         newMZmineFile);
                 break;
-            case NETCDF:
-                newTask = new NetCDFReadTask(project, fileNames[i],
-                        newMZmineFile);
-                break;
-            case AGILENT_CSV:
-                newTask = new AgilentCsvReadTask(project, fileNames[i],
-                        newMZmineFile);
-                break;
-            case THERMO_RAW:
-            case WATERS_RAW:
-                newTask = new NativeFileReadTask(project, fileNames[i],
-                        fileType, newMZmineFile);
+            //case NETCDF:
+            //    newTask = new NetCDFReadTask(project, fileNames[i],
+            //            newMZmineFile);
+            //    break;
+            //case AGILENT_CSV:
+            //    newTask = new AgilentCsvReadTask(project, fileNames[i],
+            //            newMZmineFile);
+            //    break;
+            //case THERMO_RAW:
+            //case WATERS_RAW:
+            //    newTask = new NativeFileReadTask(project, fileNames[i],
+            //            fileType, newMZmineFile);
             }
 
             if (newTask == null) {

@@ -24,12 +24,12 @@ package net.sf.mzmine.modules.rawdatamethods.rawdataimport;
  */
 public enum RawDataFileType {
 
-    MZML, //
+//    MZML, //
     MZXML, //
-    MZDATA, //
-    NETCDF, //
-    AGILENT_CSV, //
-    THERMO_RAW, //
-    WATERS_RAW //
+//    MZDATA, //
+//    NETCDF, //
+//    AGILENT_CSV, //
+//    THERMO_RAW, //
+//    WATERS_RAW //
 
 }
